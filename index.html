@@ -6,7 +6,112 @@
     <title>Coffee Shop</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header class="header">
+      <div class="logo"></div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">Favorite coffee</li>
+          <li class="nav__item">About</li>
+          <li class="nav__item">Mobile app</li>
+          <li class="nav__item">Contact us</li>
+        </ul>
+      </nav>
+      <div class="theme">
+        <span class="theme__light"></span>
+        <span class="theme__dark"></span>
+      </div>
+      <a class="header__link" href="#">
+        <span class="header__text">Menu</span>
+        <span class="coffee-icon"></span>
+      </a>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <h1 class="sr-only">Coffee Shop</h1>
+        <p class="hero__primary-text">Enjoy premium coffee at our charming cafe</p>
+        <p class="hero__secondary-text">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
+        <button class="button hero__button">Menu</button>
+      </section>
+      <section class="slider-section">
+        <h2 class="slider-section__title">Choose your <span class="cursive-text">favorite</span> coffee</h2>
+        <div class="slider">
+          <div class="slider__body">
+            <span class="slider__left-arrow"></span>
+            <div class="slider__inner">
+              <div class="slider__item">
+                <img src="#" alt="#" class="slider__image">
+                <h3 class="slider__item-title">S’mores Frappuccino</h3>
+                <p class="slider__item-descr">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                <span class="slider__item-price">$5.50</span>
+              </div>
+            </div>
+            <span class="slider__right-arrow"></span>
+          </div>
+          <div class="slider__pagination">
+            <span class="slider__dot"></span>
+            <span class="slider__dot"></span>
+            <span class="slider__dot"></span>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <h2 class="about__title">Resource is <span class="cursive-text">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
+        <div class="about__gellery">
+          <img src="#" alt="#" class="about__image">
+          <img src="#" alt="#" class="about__image">
+          <img src="#" alt="#" class="about__image">
+          <img src="#" alt="#" class="about__image">
+        </div>
+      </section>
+      <section class="download">
+        <div class="download__app">
+          <h2 class="download__title"><span class="cursive-text">Download</span> our app to start ordering</h2>
+          <p class="download__info">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
+          <div class="download__link-box">
+            <a href="#" class="download__link appstore">
+              <span class="download__link-icon"></span>
+              <span class="download__link-available">Available on the</span>
+              <span class="download__link-title">App Store</span>
+            </a>
+            <a href="#" class="download__link googlesore">
+              <span class="download__link-icon"></span>
+              <span class="download__link-available">Available on</span>
+              <span class="download__link-title">Google Play</span>
+            </a>
+          </div>
+        </div>
+        <div class="download__image"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__social-info">
+        <h2 class="footer-title">Sip, Savor, Smile. <span class="cursive-text">It’s coffee time!</span></h2>
+        <div class="footer__icon-box">
+          <span class="footer__icon twitter"></span>
+          <span class="footer__icon instagramm"></span>
+          <span class="footer__icon facebook"></span>
+        </div>
+      </div>
+      <div class="footer__contacts">
+        <p class="footer__contacts-us">Contact us</p>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <span class="footer__list-icon"></span>
+            <span class="footer__list-address">8558 Green Rd.,  LA</span>
+          </li>
+          <li class="footer__list-item">
+            <a href="tel: +16095550123">
+              <span class="footer__list-icon"></span>
+              <span class="footer__list-address">+1 (603) 555-0123</span>
+            </a>
+          </li>
+          <li class="footer__list-item">
+            <span class="footer__list-icon"></span>
+            <span class="footer__list-address">Mon–Sat: 9:00–23:00</span>
+          </li>
+        </ul>
+      </div>
+    </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
