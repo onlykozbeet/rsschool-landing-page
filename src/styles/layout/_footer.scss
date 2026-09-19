@@ -1,0 +1,151 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	gap: 100px;
+	margin: 100px 40px 40px;
+	padding: 100px;
+	border-radius: 40px;
+	background-color: $color-background-container;
+	color: $color-text-inverse;
+
+	&__social-info {
+		max-width: 530px;
+	}
+
+	&-title {
+		margin: 0;
+		color: $color-text-inverse;
+
+		.cursive-text {
+			color: $color-accent;
+		}
+	}
+
+	&__icon-box {
+		display: flex;
+		gap: 12px;
+		margin-top: 40px;
+	}
+
+	&__icon {
+		display: block;
+		width: 60px;
+		height: 60px;
+		border: 1px solid $color-border-primary;
+		border-radius: 50%;
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: background-color 0.3s ease, border-color 0.3s ease;
+
+		&.twitter {
+			background-image: url('/icons/twitter.svg');
+
+			&:hover {
+				background-image: url('/icons/twitter-dark.svg');
+			}
+		}
+
+		&.instagram {
+			background-image: url('/icons/instagram.svg');
+
+			&:hover {
+				background-image: url('/icons/instagram-dark.svg');
+			}
+		}
+
+		&.facebook {
+			background-image: url('/icons/facebook.svg');
+
+			&:hover {
+				background-image: url('/icons/facebook-dark.svg');
+			}
+		}
+
+		&:hover {
+			border-color: $color-text-inverse;
+			background-color: $color-text-inverse;
+		}
+	}
+
+	&__contacts {
+		min-width: 400px;
+		padding-top: 12px;
+	}
+
+	&__contacts-us {
+		margin: 0 0 36px;
+		font-size: 24px;
+		font-weight: 600;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list-item,
+	&__contact-link {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		color: $color-text-inverse;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	&__contact-link {
+		width: fit-content;
+	}
+
+	&__list-icon {
+		display: block;
+		width: 24px;
+		height: 24px;
+		flex-shrink: 0;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&__list-item {
+		position: relative;
+		width: fit-content;
+		padding-bottom: 4px;
+
+		&:nth-child(1) .footer__list-icon {
+			background-image: url('/icons/pin-alt.svg');
+		}
+
+		&:nth-child(2) .footer__list-icon {
+			background-image: url('/icons/phone.svg');
+		}
+
+		&:nth-child(3) .footer__list-icon {
+			background-image: url('/icons/clock.svg');
+		}
+
+		&::after {
+			position: absolute;
+			right: 0;
+			bottom: -1px;
+			left: 0;
+			width: 0;
+			height: 1px;
+			background-color: $color-text-inverse;
+			content: '';
+			transition: width 0.3s ease;
+		}
+
+		&:hover {
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
