@@ -23,5 +23,9 @@
     &:hover {
       border-bottom-color: currentColor;
     }
+    &.active {
+      border-bottom-color: currentColor;
+      pointer-events: none;
+    }
   }
 }
