@@ -1,0 +1,9 @@
+.nav {
+  &__list {
+    display: flex;
+    gap: 0 40px;
+  }
+  &__item {
+    cursor: pointer;
+  }
+}

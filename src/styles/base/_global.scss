@@ -28,6 +28,16 @@ footer {
   width: min(100%, 1440px);
 }
 
+.coffee-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url('/icons/coffee-cup.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 a {
   color: inherit;
   text-decoration: none;
