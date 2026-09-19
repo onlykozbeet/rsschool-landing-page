@@ -1,0 +1,42 @@
+@use '../abstracts/variables';
+
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  color: variables.$color-text-primary;
+  font-family: variables.$font-family-main;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: variables.$color-background-page;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header,
+main,
+footer {
+  width: min(100%, 1440px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
