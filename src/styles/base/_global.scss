@@ -51,7 +51,20 @@ ol {
   list-style: none;
 }
 
-.accent-text {
+.subtitle {
+  font-size: 6rem;
+  line-height: 1.25;
+}
+
+.accent-text,
+.cursive-text {
   color: $color-accent;
-  font-style: italic;
+}
+
+.cursive-text {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 600;
+  transform: skewX(-10deg);
+  transform-origin: left center;
 }
