@@ -76,18 +76,18 @@
   }
 
   &__left-arrow {
-    background-image: url('/icons/arrow-left.svg');
+    background-image: url('/assets/images/icons/arrow-left.svg');
 
     &:hover {
-      background-image: url('/icons/arrow-left-light.svg');
+      background-image: url('/assets/images/icons/arrow-left-light.svg');
     }
   }
 
   &__right-arrow {
-    background-image: url('/icons/arrow-right.svg');
+    background-image: url('/assets/images/icons/arrow-right.svg');
 
     &:hover {
-      background-image: url('/icons/arrow-right-light.svg');
+      background-image: url('/assets/images/icons/arrow-right-light.svg');
     }
   }
 
@@ -184,11 +184,11 @@ body.dark-theme {
   }
 
   .slider__left-arrow {
-    background-image: url('/dark-theme/arrow-left-light.svg');
+    background-image: url('/assets/images/dark-theme/arrow-left-light.svg');
   }
 
   .slider__right-arrow {
-    background-image: url('/dark-theme/arrow-right-light.svg');
+    background-image: url('/assets/images/dark-theme/arrow-right-light.svg');
   }
 
   .slider__dot {

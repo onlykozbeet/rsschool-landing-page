@@ -8,7 +8,7 @@
   padding: 100px;
   border-radius: 40px;
   overflow: hidden;
-  background: url('/hero/img-hero.jpg') center / cover no-repeat;
+  background: url('/assets/images/hero/img-hero.jpg') center / cover no-repeat;
 
   &__primary-text {
     max-width: 530px;
@@ -47,7 +47,7 @@
       width: 0;
       height: 2rem;
       margin-left: 0;
-      background: url('/icons/coffee-cup.svg') center / contain no-repeat;
+      background: url('/assets/images/icons/coffee-cup.svg') center / contain no-repeat;
       transition: width 0.3s ease, margin-left 0.3s ease;
     }
 
@@ -71,7 +71,7 @@ body.dark-theme {
       width: 0;
       height: 2rem;
       margin-left: 0;
-      background: url('/dark-theme/coffee-cup.svg') center / contain no-repeat;
+      background: url('/assets/images/dark-theme/coffee-cup.svg') center / contain no-repeat;
       transition: width 0.3s ease, margin-left 0.3s ease;
     }
 

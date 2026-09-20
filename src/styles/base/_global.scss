@@ -39,14 +39,14 @@ footer {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  background-image: url('/icons/coffee-cup.svg');
+  background-image: url('/assets/images/icons/coffee-cup.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
 body.dark-theme .coffee-icon {
-  background-image: url('/dark-theme/coffee-cup.svg');
+  background-image: url('/assets/images/dark-theme/coffee-cup.svg');
 }
 
 a {

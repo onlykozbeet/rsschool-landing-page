@@ -40,26 +40,26 @@
 		transition: background-color 0.3s ease, border-color 0.3s ease;
 
 		&.twitter {
-			background-image: url('/icons/twitter.svg');
+			background-image: url('/assets/images/icons/twitter.svg');
 
 			&:hover {
-				background-image: url('/icons/twitter-dark.svg');
+				background-image: url('/assets/images/icons/twitter-dark.svg');
 			}
 		}
 
 		&.instagram {
-			background-image: url('/icons/instagram.svg');
+			background-image: url('/assets/images/icons/instagram.svg');
 
 			&:hover {
-				background-image: url('/icons/instagram-dark.svg');
+				background-image: url('/assets/images/icons/instagram-dark.svg');
 			}
 		}
 
 		&.facebook {
-			background-image: url('/icons/facebook.svg');
+			background-image: url('/assets/images/icons/facebook.svg');
 
 			&:hover {
-				background-image: url('/icons/facebook-dark.svg');
+				background-image: url('/assets/images/icons/facebook-dark.svg');
 			}
 		}
 
@@ -119,15 +119,15 @@
 		padding-bottom: 4px;
 
 		&:nth-child(1) .footer__list-icon {
-			background-image: url('/icons/pin-alt.svg');
+			background-image: url('/assets/images/icons/pin-alt.svg');
 		}
 
 		&:nth-child(2) .footer__list-icon {
-			background-image: url('/icons/phone.svg');
+			background-image: url('/assets/images/icons/phone.svg');
 		}
 
 		&:nth-child(3) .footer__list-icon {
-			background-image: url('/icons/clock.svg');
+			background-image: url('/assets/images/icons/clock.svg');
 		}
 
 		&::after {
@@ -159,15 +159,15 @@ body.dark-theme {
 			border-color: $color-dark-border-primary;
 
 			&.twitter {
-				background-image: url('/dark-theme/twitter.svg');
+				background-image: url('/assets/images/dark-theme/twitter.svg');
 			}
 
 			&.instagram {
-				background-image: url('/dark-theme/instagram.svg');
+				background-image: url('/assets/images/dark-theme/instagram.svg');
 			}
 
 			&.facebook {
-				background-image: url('/dark-theme/facebook.svg');
+				background-image: url('/assets/images/dark-theme/facebook.svg');
 			}
 
 			&:hover {

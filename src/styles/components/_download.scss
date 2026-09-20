@@ -75,19 +75,19 @@
     }
 
     &.appstore .download__link-icon {
-      background-image: url('/icons/apple.svg');
+      background-image: url('/assets/images/icons/apple.svg');
     }
 
     &.googlestore .download__link-icon {
-      background-image: url('/icons/google.svg');
+      background-image: url('/assets/images/icons/google.svg');
     }
 
     &:hover.appstore .download__link-icon {
-      background-image: url('/icons/apple-light.svg');
+      background-image: url('/assets/images/icons/apple-light.svg');
     }
 
     &:hover.googlestore .download__link-icon {
-      background-image: url('/icons/google-light.svg');
+      background-image: url('/assets/images/icons/google-light.svg');
     }
   }
 
@@ -95,7 +95,7 @@
     flex: 1 1 50%;
     min-width: 0;
     min-height: 63rem;
-    background: url('/download/mobile-screens.png') center / contain no-repeat;
+    background: url('/assets/images/download/mobile-screens.png') center / contain no-repeat;
   }
 }
 
@@ -104,11 +104,11 @@ body.dark-theme {
     border-color: $color-dark-border-inverse;
 
     &.appstore .download__link-icon {
-      background-image: url('/dark-theme/apple-light.svg');
+      background-image: url('/assets/images/dark-theme/apple-light.svg');
     }
 
     &.googlestore .download__link-icon {
-      background-image: url('/dark-theme/google-light.svg');
+      background-image: url('/assets/images/dark-theme/google-light.svg');
     }
 
     &:hover {
