@@ -150,3 +150,39 @@
     background-color: $color-background-page;
   }
 }
+
+body.dark-theme {
+  .menu__card {
+    border-color: $color-dark-border-primary;
+  }
+
+  .menu__category-icon {
+    background-color: $color-dark-border-primary;
+  }
+
+  .menu__category {
+    border-color: $color-dark-border-primary;
+
+    &:hover {
+      color: $color-text-inverse;
+      background-color: $color-dark-container;
+      border-color: $color-dark-container;
+
+      .menu__category-icon {
+        background-color: $color-dark-page;
+      }
+    }
+  }
+
+  #coffee:checked ~ .menu__categories label[for='coffee'],
+  #tea:checked ~ .menu__categories label[for='tea'],
+  #dessert:checked ~ .menu__categories label[for='dessert'] {
+    color: $color-text-inverse;
+    background-color: $color-dark-container;
+    border-color: $color-dark-container;
+
+    .menu__category-icon {
+      background-color: $color-dark-page;
+    }
+  }
+}
