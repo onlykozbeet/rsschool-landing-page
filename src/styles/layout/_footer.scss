@@ -149,3 +149,31 @@
 		}
 	}
 }
+
+body.dark-theme {
+	.footer {
+		background-color: $color-dark-container;
+		color: $color-text-inverse;
+
+		&__icon {
+			border-color: $color-dark-border-primary;
+
+			&.twitter {
+				background-image: url('/dark-theme/twitter.svg');
+			}
+
+			&.instagram {
+				background-image: url('/dark-theme/instagram.svg');
+			}
+
+			&.facebook {
+				background-image: url('/dark-theme/facebook.svg');
+			}
+
+			&:hover {
+				border-color: $color-dark-page;
+				background-color: $color-dark-page;
+			}
+		}
+	}
+}

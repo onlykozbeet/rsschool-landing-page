@@ -110,4 +110,32 @@
   }
 }
 
+body.dark-theme {
+  .slider__left-arrow,
+  .slider__right-arrow {
+    border-color: $color-dark-border-inverse;
+
+    &:hover {
+      border-color: $color-dark-container;
+      background-color: $color-dark-container;
+    }
+  }
+
+  .slider__left-arrow {
+    background-image: url('/dark-theme/arrow-left-light.svg');
+  }
+
+  .slider__right-arrow {
+    background-image: url('/dark-theme/arrow-right-light.svg');
+  }
+
+  .slider__dot {
+    background-color: $color-dark-border-primary;
+
+    &:first-child {
+      background-color: $color-text-inverse;
+    }
+  }
+}
+
 

@@ -21,6 +21,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-theme {
+  color: $color-text-inverse;
+  background-color: $color-dark-page;
 }
 
 header,
@@ -37,6 +43,10 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+body.dark-theme .coffee-icon {
+  background-image: url('/dark-theme/coffee-cup.svg');
 }
 
 a {
