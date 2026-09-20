@@ -40,7 +40,6 @@
   &__light {
     background-image: url('/icons/Sun.svg');
     background-size: 2.2rem 2.2rem;
-    background-color: $color-accent;
   }
 
   &__dark {
@@ -52,5 +51,31 @@
       background-image: url('/icons/Moon-light.svg');
       background-color: $color-dark-border-primary;
     }
+  }
+
+  &__input:checked + &__box {
+    background-color: $color-accent;
+  }
+}
+
+body.dark-theme {
+  .theme {
+    border-color: $color-dark-border-primary;
+
+    &__box {
+      background-color: transparent;
+    }
+
+    &__input:checked + &__box {
+      background-color: $color-accent;
+    }
+
+    &__light:hover {
+      background-color: $color-dark-container;
+    }
+
+     &__dark {
+      background-image: url('/dark-theme/Moon-light.svg');
+  }
   }
 }
