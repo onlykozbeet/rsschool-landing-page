@@ -59,3 +59,27 @@
     }
   }
 }
+
+body.dark-theme {
+  .hero__button {
+    color: $color-text-inverse;
+    background-color: $color-dark-page;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2rem;
+      margin-left: 0;
+      background: url('/dark-theme/coffee-cup.svg') center / contain no-repeat;
+      transition: width 0.3s ease, margin-left 0.3s ease;
+    }
+
+    &:hover {
+      &::after {
+        width: 2rem;
+        margin-left: 0.8rem;
+      }
+    }
+  }
+}
