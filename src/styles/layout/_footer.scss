@@ -1,10 +1,10 @@
 @use '../abstracts/variables' as *;
 
 .footer {
+	width: min(calc(100% - 8rem), 136rem);
+	max-width: 136rem;
 	display: flex;
-	justify-content: space-between;
 	gap: 100px;
-	margin: 100px 40px 40px;
 	padding: 100px;
 	border-radius: 40px;
 	background-color: $color-background-container;
@@ -71,11 +71,11 @@
 
 	&__contacts {
 		min-width: 400px;
-		padding-top: 12px;
+		padding-top: 32px;
 	}
 
 	&__contacts-us {
-		margin: 0 0 36px;
+		margin: 0 0 40px;
 		font-size: 24px;
 		font-weight: 600;
 	}
@@ -93,7 +93,7 @@
 	&__contact-link {
 		display: flex;
 		align-items: center;
-		gap: 12px;
+		gap: 16px 4px;
 		color: $color-text-inverse;
 		font-weight: 600;
 		text-decoration: none;
@@ -175,5 +175,48 @@ body.dark-theme {
 				background-color: $color-dark-page;
 			}
 		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.footer {
+		flex-direction: column;
+		gap: 6rem;
+		padding: 6rem;
+
+		&__contacts {
+			min-width: 0;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		flex-direction: column;
+		gap: 6rem;
+		padding: 10rem 6rem;
+
+		&__contacts {
+			min-width: 0;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.footer {
+		width: calc(100% - 3.2rem);
+		gap: 4rem 0;
+		margin-bottom: 4rem;
+		padding: 6rem 1.6rem;
+		border-radius: 4rem;
+
+		&-title {
+			font-size: 3.2rem;
+			line-height: 1.2;
+		}
+    &__contacts {
+			min-width: 0;
+		  padding-top: 0;
+	}
 	}
 }

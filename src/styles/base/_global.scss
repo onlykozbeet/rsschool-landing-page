@@ -73,9 +73,7 @@ ol {
 }
 
 .cursive-text {
-  display: inline-block;
-  font-style: normal;
+  display: inline;
+  font-style: italic;
   font-weight: 600;
-  transform: skewX(-10deg);
-  transform-origin: left center;
 }

@@ -29,3 +29,33 @@
     }
   }
 }
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 4rem;
+
+    .nav,
+    .header__link {
+      display: none;
+    }
+
+    .burger {
+      display: inline-flex;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    margin-top: 2rem;
+    padding: 0 1.6rem;
+
+    &__actions {
+    gap: 0 1.2rem;
+  }
+  }
+}

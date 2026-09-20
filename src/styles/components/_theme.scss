@@ -15,10 +15,6 @@
     height: 0.1rem;
     opacity: 0;
 
-    &:focus-visible + .theme__box {
-      outline: 0.2rem solid $color-accent;
-      outline-offset: 0.2rem;
-    }
   }
 
   &__box {
@@ -77,5 +73,14 @@ body.dark-theme {
      &__dark {
       background-image: url('/dark-theme/Moon-light.svg');
   }
+  }
+}
+
+@media (max-width: 768px) {
+  .theme {
+    &__box {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
   }
 }

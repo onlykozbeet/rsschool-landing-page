@@ -120,3 +120,44 @@ body.dark-theme {
   }
 }
 
+@media (max-width: 768px) {
+  .download {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10rem;
+    min-height: 0;
+
+    &__app {
+      max-width: none;
+    }
+
+    &__image {
+      min-height: 63rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .download {
+    gap: 2rem 0;
+
+    &__title {
+      font-size: 3.2rem;
+      line-height: 1.2;
+    }
+
+    &__info {
+      margin: 4rem 0;
+    }
+
+    &__link-box {
+      flex-direction: column;
+    }
+
+    &__image {
+      min-height: 42rem;
+      background-size: contain;
+    }
+  }
+}
+
