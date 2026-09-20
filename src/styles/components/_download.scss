@@ -99,3 +99,24 @@
   }
 }
 
+body.dark-theme {
+  .download__link {
+    border-color: $color-dark-border-inverse;
+
+    &.appstore .download__link-icon {
+      background-image: url('/dark-theme/apple-light.svg');
+    }
+
+    &.googlestore .download__link-icon {
+      background-image: url('/dark-theme/google-light.svg');
+    }
+
+    &:hover {
+      color: $color-text-inverse;
+      background-color: $color-dark-container;
+      border-color: $color-dark-container;
+    }
+
+  }
+}
+
