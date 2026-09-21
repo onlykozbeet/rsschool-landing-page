@@ -32,8 +32,7 @@
       transition: transform 0.2s ease;
     }
 
-    &:hover,
-    &:focus-visible {
+    &:hover {
       &::after {
         transform: scaleX(1);
       }
