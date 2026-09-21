@@ -1,0 +1,86 @@
+@use '../abstracts/variables' as *;
+
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0.4rem;
+  border: 0.1rem solid $color-border-primary;
+  border-radius: 10rem;
+
+  &__input {
+    position: absolute;
+    width: 0.1rem;
+    height: 0.1rem;
+    opacity: 0;
+
+  }
+
+  &__box {
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  &__light {
+    background-image: url('/assets/images/icons/Sun.svg');
+    background-size: 2.2rem 2.2rem;
+  }
+
+  &__dark {
+    background-image: url('/assets/images/icons/Moon.svg');
+    background-size: 1.8rem 1.8rem;
+    transition: background-color 0.2s ease, background-image 0.2s ease;
+
+    &:hover {
+      background-image: url('/assets/images/icons/Moon-light.svg');
+      background-color: $color-dark-border-primary;
+    }
+  }
+
+  &__input:checked + &__box {
+    background-color: $color-accent;
+  }
+}
+
+body.dark-theme {
+  .theme {
+    border-color: $color-dark-border-primary;
+
+    &__box {
+      background-color: transparent;
+    }
+
+    &__input:checked + &__box {
+      background-color: $color-accent;
+    }
+
+    &__light:hover {
+      background-color: $color-dark-container;
+    }
+
+     &__dark {
+      background-image: url('/assets/images/dark-theme/Moon-light.svg');
+  }
+  }
+}
+
+@media (max-width: 768px) {
+  .theme {
+    &__box {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+  }
+}

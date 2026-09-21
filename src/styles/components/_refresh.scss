@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *;
+
+.refresh {
+  display: none;
+  width: 6rem;
+  height: 6rem;
+  margin: 4rem auto 0;
+  padding: 0;
+  border: 0.1rem solid $color-border-inverse;
+  border-radius: 50%;
+  background: transparent url('/assets/images/icons/refresh.svg') center / 2.4rem no-repeat;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #coffee:checked ~ .refresh {
+    display: block;
+  }
+}
+
+body.dark-theme .refresh {
+  border-color: $color-dark-border-inverse;
+  background-image: url('/assets/images/dark-theme/refresh-light.svg');
+}

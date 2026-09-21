@@ -1,0 +1,131 @@
+@use '../abstracts/variables' as *;
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 590px;
+  padding: 100px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: url('/assets/images/hero/img-hero.jpg') center / cover no-repeat;
+
+  &__primary-text {
+    max-width: 530px;
+    margin: 0;
+    font-size: 7.2rem;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: $color-text-inverse;
+  }
+
+  &__secondary-text {
+    max-width: 530px;
+    margin: 40px 0;
+    color: $color-text-inverse;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20rem;
+    min-height: 6.4rem;
+    padding: 2rem 4rem;
+    border-radius: 10rem;
+    color: $color-text-primary;
+    font-weight: 600;
+    background-color: $color-background-page;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2rem;
+      margin-left: 0;
+      background: url('/assets/images/icons/coffee-cup.svg') center / contain no-repeat;
+      transition: width 0.3s ease, margin-left 0.3s ease;
+    }
+
+    &:hover {
+      &::after {
+        width: 2rem;
+        margin-left: 0.8rem;
+      }
+    }
+  }
+}
+
+body.dark-theme {
+  .hero__button {
+    color: $color-text-inverse;
+    background-color: $color-dark-page;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2rem;
+      margin-left: 0;
+      background: url('/assets/images/dark-theme/coffee-cup.svg') center / contain no-repeat;
+      transition: width 0.3s ease, margin-left 0.3s ease;
+    }
+
+    &:hover {
+      &::after {
+        width: 2rem;
+        margin-left: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 644px;
+    padding: 6rem;
+
+    &__primary-text {
+      max-width: 600px;
+    }
+
+    &__button::after {
+      width: 2rem;
+      margin-left: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body.dark-theme .hero__button::after {
+    width: 2rem;
+    margin-left: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 553px;
+    padding: 6rem 1.6rem;
+    border-radius: 4rem;
+
+    &__primary-text {
+      max-width: 100%;
+      font-size: 4.2rem;
+      line-height: 1.2;
+    }
+
+    &__secondary-text {
+      margin: 4rem 0;
+    }
+
+    &__button {
+      min-width: 20rem;
+      min-height: 6.4rem;
+    }
+  }
+}

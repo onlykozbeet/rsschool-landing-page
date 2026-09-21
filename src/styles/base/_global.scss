@@ -1,0 +1,80 @@
+@use '../abstracts/variables' as *;
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  color: $color-text-primary;
+  font-family: $font-family-main;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  background-color: $color-background-page;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-theme {
+  color: $color-text-inverse;
+  background-color: $color-dark-page;
+}
+
+header,
+main,
+footer {
+  width: min(100%, 1440px);
+}
+
+.coffee-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url('/assets/images/icons/coffee-cup.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+body.dark-theme .coffee-icon {
+  background-image: url('/assets/images/dark-theme/coffee-cup.svg');
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.subtitle {
+  font-size: 6rem;
+  line-height: 1.25;
+}
+
+.accent-text,
+.cursive-text {
+  color: $color-accent;
+  font-style: italic;
+}
+
+.cursive-text {
+  display: inline;
+  font-style: italic;
+  font-weight: 600;
+}
