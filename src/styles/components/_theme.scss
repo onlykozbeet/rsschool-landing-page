@@ -9,6 +9,8 @@
   border: 0.1rem solid $color-border-primary;
   border-radius: 10rem;
 
+  position: relative;
+  z-index: 1000;
   &__input {
     position: absolute;
     width: 0.1rem;
