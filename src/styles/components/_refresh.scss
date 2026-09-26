@@ -12,10 +12,8 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  #coffee:checked ~ .refresh {
-    display: block;
-  }
+.refresh--visible {
+  display: block;
 }
 
 body.dark-theme .refresh {

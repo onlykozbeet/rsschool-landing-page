@@ -187,11 +187,6 @@ body.dark-theme {
       font-size: 6rem;
     }
 
-    &__card {
-      &_coffee:nth-child(n + 5) {
-        display: none;
-      }
-    }
   }
 }
 
@@ -208,11 +203,6 @@ body.dark-theme {
       gap: 4rem;
     }
 
-    &__card {
-      &_coffee:nth-child(n + 5) {
-        display: none;
-      }
-    }
   }
 }
 
@@ -238,10 +228,6 @@ body.dark-theme {
 
     &__card {
       width: 100%;
-    }
-
-    &__card_coffee:nth-child(n + 5) {
-      display: none;
     }
 
   }
