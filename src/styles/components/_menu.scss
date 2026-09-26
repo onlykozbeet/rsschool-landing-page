@@ -73,12 +73,9 @@
     border: 0.1rem solid $color-border-primary;
     border-radius: 40px;
     cursor: pointer;
-
-    &_tea,
-    &_dessert {
-      display: none;
-    }
   }
+
+  &__card--hidden { display: none; }
 
   &__image-wrapper {
     width: 100%;
@@ -130,21 +127,7 @@
   }
 }
 
-#tea:checked ~ .menu__catalog .menu__card_coffee,
-#tea:checked ~ .menu__catalog .menu__card_dessert,
-#dessert:checked ~ .menu__catalog .menu__card_coffee,
-#dessert:checked ~ .menu__catalog .menu__card_tea {
-  display: none;
-}
-
-#tea:checked ~ .menu__catalog .menu__card_tea,
-#dessert:checked ~ .menu__catalog .menu__card_dessert {
-  display: block;
-}
-
-#coffee:checked ~ .menu__categories label[for='coffee'],
-#tea:checked ~ .menu__categories label[for='tea'],
-#dessert:checked ~ .menu__categories label[for='dessert'] {
+.menu__category--active {
   color: $color-text-inverse;
   background-color: $color-background-container;
   border-color: $color-background-container;
@@ -177,9 +160,7 @@ body.dark-theme {
     }
   }
 
-  #coffee:checked ~ .menu__categories label[for='coffee'],
-  #tea:checked ~ .menu__categories label[for='tea'],
-  #dessert:checked ~ .menu__categories label[for='dessert'] {
+  .menu__category--active {
     color: $color-text-inverse;
     background-color: $color-dark-container;
     border-color: $color-dark-container;
