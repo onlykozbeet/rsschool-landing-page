@@ -5,6 +5,7 @@ import { initBurger } from './js/burger.js';
 import { initSlider } from './js/slider.js';
 import { initCategory } from './js/category.js';
 import { initRefresh } from './js/refresh.js';
+import { initModal } from './js/modal.js';
 
 const init = () => {
 	initTheme();
@@ -12,6 +13,7 @@ const init = () => {
 	initSlider();
 	initCategory();
 	initRefresh();
+	initModal();
 };
 
 init();
