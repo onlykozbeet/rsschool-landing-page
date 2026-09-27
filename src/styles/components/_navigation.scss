@@ -86,13 +86,14 @@
     transform: translateX(100%);
     opacity: 0;
     visibility: hidden;
-    transition: none;
+    transition: transform 0.35s ease, opacity 0.35s ease, visibility 0s linear 0.35s;
 
 
     &--active {
       transform: translateX(0);
       opacity: 1;
       visibility: visible;
+      transition-delay: 0s;
     }
 
     &__list {
