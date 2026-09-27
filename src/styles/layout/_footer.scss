@@ -42,30 +42,38 @@
 		&.twitter {
 			background-image: url('/assets/images/icons/twitter.svg');
 
+			@media (hover: hover) {
 			&:hover {
 				background-image: url('/assets/images/icons/twitter-dark.svg');
+			}
 			}
 		}
 
 		&.instagram {
 			background-image: url('/assets/images/icons/instagram.svg');
 
+			@media (hover: hover) {
 			&:hover {
 				background-image: url('/assets/images/icons/instagram-dark.svg');
+			}
 			}
 		}
 
 		&.facebook {
 			background-image: url('/assets/images/icons/facebook.svg');
 
+			@media (hover: hover) {
 			&:hover {
 				background-image: url('/assets/images/icons/facebook-dark.svg');
 			}
+			}
 		}
 
+		@media (hover: hover) {
 		&:hover {
 			border-color: $color-text-inverse;
 			background-color: $color-text-inverse;
+		}
 		}
 	}
 
@@ -142,10 +150,12 @@
 			transition: width 0.3s ease;
 		}
 
+		@media (hover: hover) {
 		&:hover {
 			&::after {
 				width: 100%;
 			}
+		}
 		}
 	}
 }
@@ -170,9 +180,11 @@ body.dark-theme {
 				background-image: url('/assets/images/dark-theme/facebook.svg');
 			}
 
+			@media (hover: hover) {
 			&:hover {
 				border-color: $color-dark-page;
 				background-color: $color-dark-page;
+			}
 			}
 		}
 	}

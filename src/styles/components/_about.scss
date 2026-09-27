@@ -34,8 +34,10 @@
       aspect-ratio: 660 / 430;
     }
 
+    @media (hover: hover) {
     &:hover .about__image {
       transform: scale(1);
+    }
     }
   }
 

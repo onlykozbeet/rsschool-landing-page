@@ -44,9 +44,11 @@
     background-size: 1.8rem 1.8rem;
     transition: background-color 0.2s ease, background-image 0.2s ease;
 
+    @media (hover: hover) {
     &:hover {
       background-image: url('/assets/images/icons/Moon-light.svg');
       background-color: $color-dark-border-primary;
+    }
     }
   }
 
@@ -67,8 +69,10 @@ body.dark-theme {
       background-color: $color-accent;
     }
 
+    @media (hover: hover) {
     &__light:hover {
       background-color: $color-dark-container;
+    }
     }
 
      &__dark {

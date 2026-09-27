@@ -95,6 +95,7 @@ body.modal-open {
     outline: none;
     transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 
+    @media (hover: hover) {
     &:hover {
       color: $color-text-inverse;
       background-color: $color-background-container;
@@ -103,6 +104,7 @@ body.modal-open {
       .modal__option-mark {
         color: $color-text-primary;
       }
+    }
     }
 
     &--selected {
@@ -173,9 +175,11 @@ body.modal-open {
     outline: none;
     transition: color 0.3s ease, background-color 0.3s ease;
 
+    @media (hover: hover) {
     &:hover {
       color: $color-text-inverse;
       background-color: $color-background-container;
+    }
     }
   }
 }
@@ -191,6 +195,7 @@ body.dark-theme .modal {
   &__option {
     border-color: $color-dark-border-primary;
 
+    @media (hover: hover) {
     &:hover {
       background-color: $color-dark-container;
       border-color: $color-dark-container;
@@ -198,6 +203,7 @@ body.dark-theme .modal {
       .modal__option-mark {
         color: $color-text-inverse;
       }
+    }
     }
 
     &--selected {
@@ -221,9 +227,11 @@ body.dark-theme .modal {
   &__close {
     border-color: $color-dark-border-inverse;
 
+    @media (hover: hover) {
     &:hover {
       color: $color-text-inverse;
       background-color: $color-dark-container;
+    }
     }
   }
 }

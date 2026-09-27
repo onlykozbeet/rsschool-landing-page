@@ -82,25 +82,31 @@
     background-repeat: no-repeat;
     background-size: 2.4rem;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+    @media (hover: hover) {
     &:hover {
       border-color: $color-dark-container;
       background-color: $color-dark-container;
+    }
     }
   }
 
   &__left-arrow {
     background-image: url('/assets/images/icons/arrow-left.svg');
 
+    @media (hover: hover) {
     &:hover {
       background-image: url('/assets/images/icons/arrow-left-light.svg');
+    }
     }
   }
 
   &__right-arrow {
     background-image: url('/assets/images/icons/arrow-right.svg');
 
+    @media (hover: hover) {
     &:hover {
       background-image: url('/assets/images/icons/arrow-right-light.svg');
+    }
     }
   }
 
@@ -188,9 +194,11 @@ body.dark-theme {
   .slider__right-arrow {
     border-color: $color-dark-border-inverse;
 
+    @media (hover: hover) {
     &:hover {
       border-color: $color-dark-container;
       background-color: $color-dark-container;
+    }
     }
   }
 
