@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Shop</title>
+    <title>Coffee House</title>
     <link rel="icon" href="/rsschool-landing-page/assets/favicon_io/favicon.ico" sizes="any">
-    <script type="module" crossorigin src="/rsschool-landing-page/assets/main-B1z8tLmX.js"></script>
-    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/main-1FWGyNMs.css">
+    <script type="module" crossorigin src="/rsschool-landing-page/assets/main-UpkRJ_Ww.js"></script>
+    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/main-1usnz9p6.css">
   </head>
   <body>
     <header class="header">
@@ -18,6 +18,7 @@
           <li class="nav__item"><a class="nav__link" href="#mobile-app">Mobile app</a></li>
           <li class="nav__item"><a class="nav__link" href="#contact-us">Contact us</a></li>
         </ul>
+        <a class="nav__link nav__menu-link" href="./menu.html"><span>Menu</span><span class="coffee-icon" aria-hidden="true"></span></a>
       </nav>
       <div class="header__actions">
         <div class="theme">
@@ -26,10 +27,6 @@
           <input class="theme__input" type="radio" name="theme" id="dark-theme">
           <label class="theme__dark theme__box" for="dark-theme"></label>
         </div>
-        <a class="header__link" href="./menu.html">
-          <span class="header__text">Menu</span>
-          <span class="coffee-icon"></span>
-        </a>
         <button class="burger" type="button">
           <span class="burger__icon"></span>
         </button>
@@ -53,13 +50,25 @@
                 <p class="slider__item-descr">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
                 <span class="slider__item-price">$5.50</span>
               </div>
+              <div class="slider__item">
+                  <img src="/rsschool-landing-page/assets/images/slider/coffee-slider-2.png" alt="Caramel Macchiato" class="slider__image">
+                  <h3 class="slider__item-title">Caramel Macchiato</h3>
+                  <p class="slider__item-descr">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                  <span class="slider__item-price">$5.00</span>
+              </div>
+              <div class="slider__item">
+                  <img src="/rsschool-landing-page/assets/images/slider/coffee-slider-3.png" alt="Ice coffee" class="slider__image">
+                  <h3 class="slider__item-title">Ice coffee</h3>
+                  <p class="slider__item-descr">A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                  <span class="slider__item-price">$4.50</span>
+              </div>
             </div>
             <span class="slider__right-arrow"></span>
           </div>
           <div class="slider__pagination">
-            <span class="slider__dot"></span>
-            <span class="slider__dot"></span>
-            <span class="slider__dot"></span>
+            <button class="slider__dot slider__dot--active" type="button"></button>
+            <button class="slider__dot" type="button"></button>
+            <button class="slider__dot" type="button"></button>
           </div>
         </div>
       </section>
