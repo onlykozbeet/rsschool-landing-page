@@ -1,0 +1,13 @@
+.logo {
+  display: block;
+  width: 100px;
+  height: 60px;
+  background-image: url('/assets/images/logo/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+body.dark-theme .logo {
+  background-image: url('/assets/images/dark-theme/logo.svg');
+}
