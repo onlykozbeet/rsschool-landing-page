@@ -1,4 +1,4 @@
-const PRODUCTS_URL = `${import.meta.env.BASE_URL}assets/data/products.json`;
+import products from './products.json';
 
 const IMAGE_EXTENSION = 'jpg';
 
@@ -35,24 +35,17 @@ const createCard = (product, imageIndex) => {
   return card;
 };
 
-export const initCatalog = async () => {
+export const initCatalog = () => {
   const catalog = document.querySelector('.menu__catalog');
   if (!catalog) return;
 
-  try {
-    const response = await fetch(PRODUCTS_URL);
+  const imageIndexes = { coffee: 0, tea: 0, dessert: 0 };
+  const cards = products
+    .filter((product) => Object.hasOwn(imageIndexes, product.category))
+    .map((product) => {
+      imageIndexes[product.category] += 1;
+      return createCard(product, imageIndexes[product.category]);
+    });
 
-    const products = await response.json();
-    const imageIndexes = { coffee: 0, tea: 0, dessert: 0 };
-    const cards = products
-      .filter((product) => Object.hasOwn(imageIndexes, product.category))
-      .map((product) => {
-        imageIndexes[product.category] += 1;
-        return createCard(product, imageIndexes[product.category]);
-      });
-
-    catalog.replaceChildren(...cards);
-  } catch (error) {
-    console.error(error);
-  }
+  catalog.replaceChildren(...cards);
 };

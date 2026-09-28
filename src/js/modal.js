@@ -1,4 +1,4 @@
-const PRODUCTS_URL = `${import.meta.env.BASE_URL}assets/data/products.json`;
+import products from './products.json';
 
 const getModalElements = () => {
   const modal = document.querySelector('.modal');
@@ -25,11 +25,6 @@ const getModalElements = () => {
     price,
     closeButton,
   };
-};
-
-const loadProducts = async () => {
-  const response = await fetch(PRODUCTS_URL);
-  return response.json();
 };
 
 const getCardCategory = (card) => {
@@ -169,14 +164,8 @@ const bindModalEvents = (elements, products) => {
   });
 };
 
-export const initModal = async () => {
+export const initModal = () => {
   const elements = getModalElements();
   if (!elements) return;
-
-  try {
-    const products = await loadProducts();
-    bindModalEvents(elements, products);
-  } catch (error) {
-    console.error(error);
-  }
+  bindModalEvents(elements, products);
 };

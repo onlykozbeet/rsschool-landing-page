@@ -8,11 +8,11 @@ import { initRefresh } from './js/refresh.js';
 import { initModal } from './js/modal.js';
 import { initCatalog } from './js/renderCatalog.js';
 
-const init = async () => {
+const init = () => {
 	initTheme();
 	initBurger();
 	initSlider();
-	await initCatalog();
+	initCatalog();
 	initCategory();
 	initRefresh();
 	initModal();
