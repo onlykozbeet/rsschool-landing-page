@@ -6,14 +6,17 @@ import { initSlider } from './js/slider.js';
 import { initCategory } from './js/category.js';
 import { initRefresh } from './js/refresh.js';
 import { initModal } from './js/modal.js';
+import { initCatalog } from './js/renderCatalog.js';
 
-const init = () => {
+const init = async () => {
 	initTheme();
 	initBurger();
 	initSlider();
+	await initCatalog();
 	initCategory();
 	initRefresh();
 	initModal();
 };
 
 init();
+
