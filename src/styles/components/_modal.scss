@@ -1,0 +1,296 @@
+@use '../abstracts/variables' as *;
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  place-items: safe center;
+  padding: 2rem;
+  overflow: auto;
+  background: rgba($color-background-overlay, 0.8);
+
+  &--open {
+    display: grid;
+  }
+
+  &__window {
+    display: flex;
+    width: min(80rem, 100%);
+    max-height: min(90vh, 62rem);
+    padding: 1.6rem;
+    overflow: auto;
+    color: $color-text-primary;
+    background: $color-background-page;
+    border-radius: 4rem;
+  }
+
+  &__content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: minmax(0, 31rem) minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 3rem;
+  }
+
+  &__details {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 2.4rem;
+    line-height: 1.25;
+  }
+
+  &__description {
+    margin: 1.2rem 0 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  &__group {
+    margin-top: 2rem;
+  }
+
+  &__label {
+    margin: 0 0 0.8rem;
+    font-size: 1.6rem;
+  }
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  &__option {
+    display: inline-flex;
+    min-height: 4.6rem;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+    color: inherit;
+    background: transparent;
+    border: 0.1rem solid $color-border-primary;
+    border-radius: 10rem;
+    font: inherit;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+
+    @media (hover: hover) {
+    &:hover {
+      color: $color-text-inverse;
+      background-color: $color-background-container;
+      border-color: $color-background-container;
+
+      .modal__option-mark {
+        color: $color-text-primary;
+      }
+    }
+    }
+
+    &--selected {
+      color: $color-text-inverse;
+      background: $color-background-container;
+      border-color: $color-background-container;
+
+      .modal__option-mark {
+        color: $color-text-primary;
+        background: $color-background-page;
+      }
+    }
+  }
+
+  &__option-mark {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    flex: 0 0 3rem;
+    place-items: center;
+    background: $color-border-primary;
+    border-radius: 50%;
+    font-size: 1.6rem;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+
+  &__notice {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    padding-top: 1.2rem;
+    border-top: 0.1rem solid $color-border-primary;
+    line-height: 1.4;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &__notice-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex: 0 0 1.6rem;
+    background: url('/assets/images/icons/notice.svg') center / contain no-repeat;
+  }
+
+  &__close {
+    display: flex;
+    width: 100%;
+    height: 4.4rem;
+    min-height: 4.4rem;
+    margin-top: 2rem;
+    padding: 0.8rem 1.8rem;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    background: transparent;
+    border: 1px solid $color-border-inverse;
+    border-radius: 10rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    @media (hover: hover) {
+    &:hover {
+      color: $color-text-inverse;
+      background-color: $color-background-container;
+    }
+    }
+  }
+}
+
+body.dark-theme .modal {
+  background: rgba($color-background-overlay, 0.8);
+
+  &__window {
+    color: $color-text-inverse;
+    background: $color-dark-page;
+  }
+
+  &__option {
+    border-color: $color-dark-border-primary;
+
+    @media (hover: hover) {
+    &:hover {
+      background-color: $color-dark-container;
+      border-color: $color-dark-container;
+
+      .modal__option-mark {
+        color: $color-text-inverse;
+      }
+    }
+    }
+
+    &--selected {
+      background: $color-dark-container;
+      border-color: $color-dark-container;
+
+      .modal__option-mark {
+        color: $color-text-inverse;
+      }
+    }
+  }
+
+  &__option-mark {
+    background: $color-dark-border-primary;
+  }
+
+  &__notice {
+    border-color: $color-dark-border-primary;
+  }
+
+  &__close {
+    border-color: $color-dark-border-inverse;
+
+    @media (hover: hover) {
+    &:hover {
+      color: $color-text-inverse;
+      background-color: $color-dark-container;
+    }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal__window {
+    width: min(68.8rem, 100%);
+    max-height: none;
+    padding: 1.6rem;
+    overflow: visible;
+  }
+
+  .modal__content {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .modal__group {
+    margin-top: 2rem;
+  }
+
+  .modal__total {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal__window {
+    width: 100%;
+    max-height: calc(100vh - 4rem);
+    padding: 1.6rem;
+    border-radius: 2.8rem;
+  }
+
+  .modal__content {
+    display: block;
+  }
+
+  .modal__image {
+    display: none;
+  }
+
+  .modal__title {
+    font-size: 2.4rem;
+  }
+
+  .modal__description {
+    margin-top: 1.2rem;
+  }
+
+  .modal__group {
+    margin-top: 2.4rem;
+  }
+
+  .modal__total {
+    margin-top: 2.4rem;
+  }
+
+  .modal__close {
+    width: 100%;
+  }
+}

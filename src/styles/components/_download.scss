@@ -43,9 +43,11 @@
     border-radius: 10rem;
     transition: color 0.3s ease, background-color 0.3s ease;
 
+    @media (hover: hover) {
     &:hover {
       color: $color-text-inverse;
       background-color: $color-background-container;
+    }
     }
 
     &-icon {
@@ -82,12 +84,16 @@
       background-image: url('/assets/images/icons/google.svg');
     }
 
+    @media (hover: hover) {
     &:hover.appstore .download__link-icon {
       background-image: url('/assets/images/icons/apple-light.svg');
     }
+    }
 
+    @media (hover: hover) {
     &:hover.googlestore .download__link-icon {
       background-image: url('/assets/images/icons/google-light.svg');
+    }
     }
   }
 
@@ -111,10 +117,12 @@ body.dark-theme {
       background-image: url('/assets/images/dark-theme/google-light.svg');
     }
 
+    @media (hover: hover) {
     &:hover {
       color: $color-text-inverse;
       background-color: $color-dark-container;
       border-color: $color-dark-container;
+    }
     }
 
   }

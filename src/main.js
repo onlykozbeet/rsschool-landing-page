@@ -1,25 +1,22 @@
 import './styles/main.scss';
 
-(() => {
-	const themeInputs = document.querySelectorAll('.theme__input');
-	const savedTheme = localStorage.getItem('theme') || 'light';
+import { initTheme } from './js/theme.js';
+import { initBurger } from './js/burger.js';
+import { initSlider } from './js/slider.js';
+import { initCategory } from './js/category.js';
+import { initRefresh } from './js/refresh.js';
+import { initModal } from './js/modal.js';
+import { initCatalog } from './js/renderCatalog.js';
 
-	const applyTheme = (theme) => {
-		document.body.classList.toggle('dark-theme', theme === 'dark');
+const init = () => {
+	initTheme();
+	initBurger();
+	initSlider();
+	initCatalog();
+	initCategory();
+	initRefresh();
+	initModal();
+};
 
-		themeInputs.forEach((input) => {
-			input.checked = input.id === `${theme}-theme`;
-		});
-	};
+init();
 
-	applyTheme(savedTheme);
-
-	themeInputs.forEach((input) => {
-		input.addEventListener('change', () => {
-			const theme = input.id === 'dark-theme' ? 'dark' : 'light';
-
-			localStorage.setItem('theme', theme);
-			applyTheme(theme);
-		});
-	});
-})();

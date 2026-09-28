@@ -1,13 +1,13 @@
+@use '../abstracts/variables' as *;
+
 .nav {
-  margin-right: 2.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0 2.4rem;
 
   &__list {
     display: flex;
     gap: 0 40px;
-  }
-
-  &__item {
-    font-weight: 600;
   }
 
   &__link {
@@ -15,6 +15,7 @@
     display: inline-block;
     padding-bottom: 0.2rem;
     color: inherit;
+    font-weight: 600;
     text-decoration: none;
     transition: opacity 0.2s ease;
 
@@ -32,12 +33,29 @@
       transition: transform 0.2s ease;
     }
 
+    @media (hover: hover) {
     &:hover {
       &::after {
         transform: scaleX(1);
       }
     }
+    }
   }
+}
+
+.nav__menu-link {
+  position: absolute;
+  top: 50%;
+  right: 4rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0 0.8rem;
+
+  &.active::after {
+    transform: scaleX(1);
+  }
+
 }
 
 @media (max-width: 870px) {
@@ -50,4 +68,66 @@
   .nav__list {
     gap: 0 10px;
   }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 8rem;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-background-page;
+    z-index: 900;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.35s ease, opacity 0.35s ease, visibility 0s linear 0.35s;
+
+
+    &--active {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0s;
+    }
+
+    &__list {
+      flex-direction: column;
+      gap: 6rem 0;
+    }
+
+    &__list,
+    &__menu-link {
+      font-size: 3.2rem;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    &__link {
+      padding-bottom: 0.4rem;
+    }
+
+    &__menu-link {
+      position: static;
+      display: inline-flex;
+      margin-top: 10rem;
+      transform: none;
+      align-items: center;
+      gap: 0 1.6rem;
+
+      .coffee-icon {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
 }
